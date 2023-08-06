@@ -1,30 +1,22 @@
-
-interface RouteAttributesInterface{
-    path: String,
-    name: String,
+interface RouteAttributesInterface {
+  path: String;
+  name: String;
 }
 
-export enum AppRoutes{
-    home="/",
-    details="/details",
-    secondDetailsPage="/details/detailsPageTwo",
-    extraDetailsPage="/details/details-sub-page/index",
+export enum AppRoutes {
+  home = "/",
+  login = "/loginn",
 }
 
-
-const routes : RouteAttributesInterface[] = [
-    {
-        path : AppRoutes.home,
-        name: "appRoutes.home"
-    },
-    {
-        path : AppRoutes.details,
-        name: "appRoutes.details"
-    },
-    {
-        path : AppRoutes.secondDetailsPage,
-        name: "appRoutes.newTodo"
-    }
-]
+const routes: RouteAttributesInterface[] = [
+  {
+    path: AppRoutes.home,
+    name: "appRoutes.home",
+  },
+  {
+    path: AppRoutes.login,
+    name: "appRoutes.login",
+  },
+];
 
 export default routes;

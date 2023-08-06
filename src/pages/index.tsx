@@ -1,16 +1,11 @@
 import type { NextPage } from "next";
-
-import { Box } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-
+import { Login } from "./login";
 
 const Home: NextPage = () => {
+  const { t } = useTranslation();
 
-  const {t} = useTranslation();
-
-  return <Box>Index Page</Box>
-
-
+  return <Login />;
 };
 
 export default Home;

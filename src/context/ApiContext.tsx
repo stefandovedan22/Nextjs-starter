@@ -1,16 +1,9 @@
 import createApiContext from "./createApiContext";
 
-import { ITodo } from "interfaces/todoInterface";
-
-export type IState = {
-  selectedTasks : ITodo[]
-}
-
-const apiReducer = (state: IState, action: any, params: any) => {
+const apiReducer = (state: any, action: any, params: any) => {
   switch (action.type) {
-
-    case "setSelectedTasks" :{
-      return{...state, selectedTasks: action.params}
+    case "setSelectedTasks": {
+      return { ...state, selectedTasks: action.params };
     }
 
     default:
@@ -18,19 +11,17 @@ const apiReducer = (state: IState, action: any, params: any) => {
   }
 };
 
-const setSelectedTasks = (dispatch:any, params:any)=>(props:ITodo[])=>{
+const setSelectedTasks = (dispatch: any, params: any) => (props: any) => {
   dispatch({
-    type:"setSelectedTasks",params:props
-  })
-}
-
+    type: "setSelectedTasks",
+    params: props,
+  });
+};
 
 export const { Provider, Context } = createApiContext(
   apiReducer,
   {
-    setSelectedTasks
+    setSelectedTasks,
   },
-  {
-    selectedTasks: [] as ITodo[]
-  }
+  {}
 );

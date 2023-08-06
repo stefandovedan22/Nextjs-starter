@@ -5,7 +5,7 @@ export const ButtonStyles = {
     primaryButton: {
       borderRadius: "0.5rem",
       bg: "#0057CC",
-      color:"white",
+      color: "white",
       margin: "0.25rem ",
       _hover: {
         bg: "#a7c5f9",

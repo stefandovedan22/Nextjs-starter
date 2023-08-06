@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         {/* <meta name="viewport" content="viewport-fit=cover" /> */}
-        <title>Demo App</title>
+        <title>App Name</title>
       </Head>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools key="react-query-devtools" initialIsOpen={false} />
